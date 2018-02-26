@@ -29,6 +29,7 @@
  void app_main (void const *argument) {
 
 	/* Run Test */
+	Test_MemoryWindow();
 
   for(;;);
 }
