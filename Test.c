@@ -6,6 +6,13 @@
 #include "Test.h"
 #include "Threads.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
+#include <string.h>
+
+
+/*----------------------------------------------------------------------------
+ * Globals
+ *---------------------------------------------------------------------------*/
+volatile unsigned int* pMem = (unsigned int *) 0x20000120;
 
 
 /*----------------------------------------------------------------------------
@@ -108,3 +115,19 @@ void Test_ThreadSwitch(){
 void Test_PeripheralSwitch(){
 	
 }
+
+
+void Test_MemoryWindow(){
+  int i;
+  unsigned int val = 0;
+  
+  for(;;){
+    for(i = 0; i < MAX_MEM_SIZE / 4; i++){
+      *(pMem + i) = val;
+    }
+    osDelay (1000);
+    val++;
+  }
+}
+
+
