@@ -29,7 +29,7 @@
  void app_main (void const *argument) {
 
 	/* Run Test */
-	//Test_ThreadSwitch();
+	Test_EventRecorder();
 
   for(;;);
 }
@@ -41,10 +41,15 @@ int main (void) {
   // System Initialization
   HAL_Init();                               				// Initialize the HAL Library     
   SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);      // Configure the System Clock  
-  osKernelInitialize();                     				// Initialize CMSIS-RTOS  
-  osThreadCreate(osThread(app_main), NULL);         // Create main thread
-  osKernelStart();                          				// Start thread execution         
-	EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
+  EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
+  Test_EventRecorder();
+  
+//  osKernelInitialize();                     				// Initialize CMSIS-RTOS  
+//  EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
+//  
+//  osThreadCreate(osThread(app_main), NULL);         // Create main thread
+//  osKernelStart();                          				// Start thread execution         
+	
 
   for(;;);
 }

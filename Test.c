@@ -108,3 +108,17 @@ void Test_ThreadSwitch(){
 void Test_PeripheralSwitch(){
 	
 }
+
+
+void Test_EventRecorder(){
+  char data[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+  
+  while(1){
+    EventRecordData(0x01, data, 8);
+    HAL_Delay(1);   
+  }
+
+}
+
+
+
