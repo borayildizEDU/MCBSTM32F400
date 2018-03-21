@@ -29,7 +29,7 @@
  void app_main (void const *argument) {
 
 	/* Run Test */
-	// TODO: Call the target test function 
+	Test_Endian();
 
   for(;;);
 }

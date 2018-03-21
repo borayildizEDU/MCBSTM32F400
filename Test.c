@@ -121,4 +121,21 @@ void Test_EventRecorder(){
 }
 
 
+/*
+return 1: BigEndian, 0: LittleEndian
+*/
+int Test_Endian(){
+	uint32_t i = 1;
+	uint8_t *c = (uint8_t*) &i;
+	
+	if(*c == 1){			// LittleEndian
+		return 0;
+	}
+	else{							// Big Endian
+		return 1;
+	}
+}
+
+
+
 
