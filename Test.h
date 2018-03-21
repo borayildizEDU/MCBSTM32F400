@@ -14,6 +14,7 @@ extern void Test_ThreadSwitch(void);
 extern void Test_PeripheralSwitch(void);
 extern void Test_EventRecorder(void);
 extern int Test_Endian(void);
+extern void Reverse(unsigned int* val);
 
 #endif
 

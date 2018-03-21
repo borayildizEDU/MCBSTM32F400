@@ -138,4 +138,18 @@ int Test_Endian(){
 
 
 
+void Reverse(unsigned int* val){
+	uint8_t *c = (uint8_t*)val;
+	uint8_t temp = c[0];
+	
+	c[0] = c[3];
+	c[3] = temp;
+	
+	temp = c[1];
+	c[1] = c[2];
+	c[2] = temp;
+}
+
+
+
 

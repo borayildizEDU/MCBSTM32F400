@@ -27,9 +27,10 @@
  * Main
  *---------------------------------------------------------------------------*/ 
  void app_main (void const *argument) {
+	 uint32_t i = 0x76543210;
 
 	/* Run Test */
-	Test_Endian();
+	Reverse(&i);
 
   for(;;);
 }
