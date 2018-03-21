@@ -2457,7 +2457,7 @@
           <Type>0</Type>
           <LineNumber>42</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240856</Address>
+          <Address>134243676</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -2483,13 +2483,13 @@
         <SubType>1</SubType>
       </ScvdList>
       <ScvdPack>
-        <Filename>E:\KeilNightlyBuilds\PACK\Keil\ARM_Compiler\1.4.0-dev0\EventRecorder.scvd</Filename>
-        <Type>Keil.ARM_Compiler.1.4.0-dev0</Type>
+        <Filename>E:\KeilNightlyBuilds\PACK\ARM\CMSIS\5.3.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
+        <Type>ARM.CMSIS.5.3.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>E:\KeilNightlyBuilds\PACK\ARM\CMSIS\5.2.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
-        <Type>ARM.CMSIS.5.2.0</Type>
+        <Filename>E:\KeilNightlyBuilds\PACK\Keil\ARM_Compiler\1.4.0\EventRecorder.scvd</Filename>
+        <Type>Keil.ARM_Compiler.1.4.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
@@ -2498,7 +2498,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -2516,7 +2516,7 @@
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
-        <StkLoc>0</StkLoc>
+        <StkLoc>1</StkLoc>
         <TrcWin>0</TrcWin>
         <newCpu>0</newCpu>
         <uProt>0</uProt>
