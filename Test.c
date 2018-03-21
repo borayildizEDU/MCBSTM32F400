@@ -151,5 +151,24 @@ void Reverse(unsigned int* val){
 }
 
 
+/*
+Test Memory Layout
+*/
+uint8_t glob1;
+uint16_t  glob2;
+uint32_t glob3;
+uint32_t glob4 = 4;
+
+
+int Test_Memory(void){
+	volatile uint32_t mem1;
+	volatile uint32_t mem2;
+	
+	glob3 = glob2 - glob1;
+	
+	return mem2 - mem1;
+}
+
+
 
 

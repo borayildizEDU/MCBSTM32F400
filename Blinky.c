@@ -20,17 +20,13 @@
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
 
 
-
-
-
 /*----------------------------------------------------------------------------
  * Main
  *---------------------------------------------------------------------------*/ 
  void app_main (void const *argument) {
-	 uint32_t i = 0x76543210;
 
 	/* Run Test */
-	Reverse(&i);
+	Test_Memory();
 
   for(;;);
 }
