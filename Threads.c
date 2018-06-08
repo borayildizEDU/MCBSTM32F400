@@ -24,7 +24,7 @@ void Thread_Func (void const *params) {
 	char str[32];
 	int i = *(int*) params;
 	int next_thread_id = (i + 1 + THREAD_COUNT) % THREAD_COUNT;
-	int wait_ms = 1000;
+	int wait_ms = 500;
 	
   while (1) {		
 		osSignalWait(0x0001, osWaitForever);		

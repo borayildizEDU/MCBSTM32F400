@@ -26,7 +26,7 @@
  void app_main (void const *argument) {
 
 	/* Run Test */
-	Test_Memory();
+	Test_ThreadSwitch();
 
   for(;;);
 }
@@ -38,7 +38,6 @@ int main (void) {
   // System Initialization
   HAL_Init();                               				// Initialize the HAL Library     
   SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);      // Configure the System Clock  
-  EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
   
   osKernelInitialize();                     				// Initialize CMSIS-RTOS  
   EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
