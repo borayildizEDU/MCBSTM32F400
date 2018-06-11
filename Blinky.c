@@ -20,31 +20,32 @@
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
 
 
+
+#define MEM_ADDRESS		(*((volatile unsigned long *) 0x20000000))
+
 /*----------------------------------------------------------------------------
  * Main
  *---------------------------------------------------------------------------*/ 
- void app_main (void const *argument) {
+int i __attribute__((at(0x20000004)));
+volatile int m = 0;
 
-	/* Run Test */
-	Test_ThreadSwitch();
 
-  for(;;);
+int foo(int i){
+	int a;
+ 
+	//a = m;
+	i = a;
+
+	return i;
 }
  
-osThreadDef(app_main, osPriorityNormal, 1, 0);
  
 int main (void) {
-
-  // System Initialization
-  HAL_Init();                               				// Initialize the HAL Library     
-  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);      // Configure the System Clock  
-  
-  osKernelInitialize();                     				// Initialize CMSIS-RTOS  
-  EventRecorderInitialize(EventRecordAll, 1);				// Initialize EventRecorder
-  
-  osThreadCreate(osThread(app_main), NULL);         // Create main thread
-  osKernelStart();                          				// Start thread execution         
+	MEM_ADDRESS = 5;
 	
+	MEM_ADDRESS++;
+                         				   
+	foo(i);
 
   for(;;);
 }

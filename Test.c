@@ -128,10 +128,10 @@ int Test_Endian(){
 	uint32_t i = 1;
 	uint8_t *c = (uint8_t*) &i;
 	
-	if(*c == 1){			// LittleEndian
+	if(*c == 1){			// LittleEndian (0x00000001)
 		return 0;
 	}
-	else{							// Big Endian
+	else{							// Big Endian (0x01000000)
 		return 1;
 	}
 }
