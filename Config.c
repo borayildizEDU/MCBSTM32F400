@@ -1,6 +1,5 @@
 #include "stm32f4xx_hal.h"              // Keil::Device:STM32Cube HAL:Common
 #include "RTE_Components.h"             // Component selection
-#include "EventRecorder.h"
 #include "Config.h"
 #include "Common.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX

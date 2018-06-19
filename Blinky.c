@@ -13,11 +13,20 @@
  *----------------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"              // Keil::Device:STM32Cube HAL:Common
 #include "RTE_Components.h"             // Component selection
-#include "EventRecorder.h"
 #include "Config.h"
-#include "Common.h"
-#include "Test.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
+
+
+/*----------------------------------------------------------------------------
+ * MainApplication Thread
+ *---------------------------------------------------------------------------*/ 
+void app_main(void const *argument){
+	while(1){
+		
+	}
+}
+
+osThreadDef(app_main, osPriorityNormal, 1, 0);
 
 
 /*----------------------------------------------------------------------------
@@ -25,6 +34,11 @@
  *---------------------------------------------------------------------------*/ 
 int main (void) {
 
+  HAL_Init();                               				// Initialize the HAL Library     
+  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);      // Configure the System Clock  
+	osKernelInitialize();                     				// Initialize CMSIS-RTOS  
+	osThreadCreate(osThread(app_main), NULL);         // Create main thread	
+  osKernelStart();                          				// Start thread execution    	
 
   for(;;);
 }

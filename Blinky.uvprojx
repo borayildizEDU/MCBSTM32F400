@@ -471,31 +471,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -504,6 +479,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -591,9 +571,6 @@
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -1065,31 +1042,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -1098,6 +1050,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -1254,9 +1211,6 @@
               </Aads>
             </GroupArmAds>
           </GroupOption>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -1766,31 +1720,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -1799,6 +1728,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -1955,9 +1889,6 @@
               </Aads>
             </GroupArmAds>
           </GroupOption>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -2467,31 +2398,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -2500,6 +2406,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -2656,9 +2567,6 @@
               </Aads>
             </GroupArmAds>
           </GroupOption>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -3199,31 +3107,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -3232,6 +3115,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -3388,9 +3276,6 @@
               </Aads>
             </GroupArmAds>
           </GroupOption>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -3932,31 +3817,6 @@
               <FilePath>.\Blinky.c</FilePath>
             </File>
             <File>
-              <FileName>Common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Common.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Test.h</FilePath>
-            </File>
-            <File>
-              <FileName>Test.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Test.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Threads.c</FilePath>
-            </File>
-            <File>
-              <FileName>Threads.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Threads.h</FilePath>
-            </File>
-            <File>
               <FileName>Config.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Config.c</FilePath>
@@ -3965,6 +3825,11 @@
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Config.h</FilePath>
+            </File>
+            <File>
+              <FileName>Notes.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Notes.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -4121,9 +3986,6 @@
               </Aads>
             </GroupArmAds>
           </GroupOption>
-        </Group>
-        <Group>
-          <GroupName>::Compiler</GroupName>
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
@@ -4304,17 +4166,6 @@
           <targetInfo name="test"/>
         </targetInfos>
       </component>
-      <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.4.0" condition="Cortex-M Device">
-        <package name="ARM_Compiler" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="Keil" version="1.4.0"/>
-        <targetInfos>
-          <targetInfo name="STM32F407 Flash"/>
-          <targetInfo name="STM32F407 Flash + ULP"/>
-          <targetInfo name="STM32F407 OPT"/>
-          <targetInfo name="STM32F407 OTP"/>
-          <targetInfo name="STM32F407 RAM"/>
-          <targetInfo name="test"/>
-        </targetInfos>
-      </component>
       <component Capiversion="1.0.0" Cbundle="MCBSTM32F400" Cclass="Board Support" Cgroup="A/D Converter" Cvendor="Keil" Cversion="2.0.0" condition="STM32F4 HAL GPIO ADC">
         <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.13.0"/>
         <targetInfos>
@@ -4482,17 +4333,10 @@
         </targetInfos>
       </file>
       <file attr="config" category="header" name="Config\EventRecorderConf.h" version="1.0.0">
-        <instance index="0">RTE\Compiler\EventRecorderConf.h</instance>
+        <instance index="0" removed="1">RTE\Compiler\EventRecorderConf.h</instance>
         <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.4.0" condition="Cortex-M Device"/>
         <package name="ARM_Compiler" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="Keil" version="1.4.0"/>
-        <targetInfos>
-          <targetInfo name="STM32F407 Flash"/>
-          <targetInfo name="STM32F407 Flash + ULP"/>
-          <targetInfo name="STM32F407 OPT"/>
-          <targetInfo name="STM32F407 OTP"/>
-          <targetInfo name="STM32F407 RAM"/>
-          <targetInfo name="test"/>
-        </targetInfos>
+        <targetInfos/>
       </file>
       <file attr="config" category="header" name="CMSIS\Driver\Config\RTE_Device.h" version="2.4.4">
         <instance index="0">RTE\Device\STM32F407IGHx\RTE_Device.h</instance>
@@ -4520,7 +4364,7 @@
           <targetInfo name="test"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="MDK\Templates\Inc\stm32f4xx_hal_conf.h" version="1.6.0">
+      <file attr="config" category="header" name="MDK\Templates\Inc\stm32f4xx_hal_conf.h" version="1.7.0">
         <instance index="0">RTE\Device\STM32F407IGHx\stm32f4xx_hal_conf.h</instance>
         <component Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.7.4" condition="STM32F4 Framework Classic"/>
         <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.13.0"/>
