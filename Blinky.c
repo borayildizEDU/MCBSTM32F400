@@ -15,18 +15,67 @@
 #include "RTE_Components.h"             // Component selection
 #include "Config.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
+#include "led.h"
+
+
+
+
+/*----------------------------------------------------------------------------
+ * Task1
+ *---------------------------------------------------------------------------*/ 
+void task1(void const *argument){
+	while(1){
+		osDelay(1000);
+		ToggleLed(1);
+	}
+}
+
+/*----------------------------------------------------------------------------
+ * Task2
+ *---------------------------------------------------------------------------*/ 
+void task2(void const *argument){
+	while(1){
+		osDelay(1000);
+		ToggleLed(2);
+	}
+}
+
+/*----------------------------------------------------------------------------
+ * Task3
+ *---------------------------------------------------------------------------*/ 
+void task3(void const *argument){
+	while(1){
+		osDelay(1000);
+		ToggleLed(3);
+	}
+}
+
+/*----------------------------------------------------------------------------
+ * Threads
+ *---------------------------------------------------------------------------*/ 
+osThreadId_t tid_app, tid_task1, tid_task2, tid_task3;
+osThreadDef(task1, osPriorityNormal, 1, 0);
+osThreadDef(task2, osPriorityNormal, 1, 0);
+osThreadDef(task3, osPriorityNormal, 1, 0);
 
 
 /*----------------------------------------------------------------------------
  * MainApplication Thread
  *---------------------------------------------------------------------------*/ 
 void app_main(void const *argument){
+	
+	tid_task1 = osThreadCreate(osThread(task1), NULL);   
+	tid_task2 = osThreadCreate(osThread(task2), NULL);  
+	tid_task3 = osThreadCreate(osThread(task3), NULL);    
+	
 	while(1){
-		
+		osDelay(1000);
+		ToggleLed(0);
 	}
 }
 
 osThreadDef(app_main, osPriorityNormal, 1, 0);
+
 
 
 /*----------------------------------------------------------------------------
@@ -34,11 +83,13 @@ osThreadDef(app_main, osPriorityNormal, 1, 0);
  *---------------------------------------------------------------------------*/ 
 int main (void) {
 
-  HAL_Init();                               				// Initialize the HAL Library     
-  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);      // Configure the System Clock  
-	osKernelInitialize();                     				// Initialize CMSIS-RTOS  
-	osThreadCreate(osThread(app_main), NULL);         // Create main thread	
-  osKernelStart();                          				// Start thread execution    	
-
+  HAL_Init();                               				   
+  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);     
+	LED_Initialize();
+	
+	
+	osKernelInitialize();                     				
+	tid_app = osThreadCreate(osThread(app_main), NULL);         
+  osKernelStart();                          			
   for(;;);
 }
