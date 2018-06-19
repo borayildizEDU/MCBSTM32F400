@@ -2,6 +2,8 @@
   ******************************************************************************
   * @file    system_stm32f4xx.c
   * @author  MCD Application Team
+  * @version V2.6.0
+  * @date    04-November-2016
   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
   *
   *   This file provides two functions and one global variable to be called from 
@@ -19,10 +21,13 @@
   *                                 during program execution.
   *
   *
+  * @note    modified by ARM
+  *          adapted for board MCBSTM32F400.
+  *
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT 2017 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT 2016 STMicroelectronics</center></h2>
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -664,24 +669,24 @@ void SystemInit_ExtMemCtl(void)
   tmp = READ_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIODEN);
   
   /* Connect PDx pins to FMC Alternate function */
-  GPIOD->AFR[0]  = 0x00CCC0CC;
+  GPIOD->AFR[0]  = 0xC0CC00CC;
   GPIOD->AFR[1]  = 0xCCCCCCCC;
   /* Configure PDx pins in Alternate function mode */  
-  GPIOD->MODER   = 0xAAAA0A8A;
+  GPIOD->MODER   = 0xAAAA8A0A;
   /* Configure PDx pins speed to 100 MHz */  
-  GPIOD->OSPEEDR = 0xFFFF0FCF;
+  GPIOD->OSPEEDR = 0xFFFFCF0F;
   /* Configure PDx pins Output type to push-pull */  
   GPIOD->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PDx pins */ 
   GPIOD->PUPDR   = 0x00000000;
 
   /* Connect PEx pins to FMC Alternate function */
-  GPIOE->AFR[0]  = 0xC00CC0CC;
+  GPIOE->AFR[0]  = 0xC0CCC0CC;
   GPIOE->AFR[1]  = 0xCCCCCCCC;
   /* Configure PEx pins in Alternate function mode */ 
-  GPIOE->MODER   = 0xAAAA828A;
+  GPIOE->MODER   = 0xAAAA8A8A;
   /* Configure PEx pins speed to 100 MHz */ 
-  GPIOE->OSPEEDR = 0xFFFFC3CF;
+  GPIOE->OSPEEDR = 0xFFFFCFCF;
   /* Configure PEx pins Output type to push-pull */  
   GPIOE->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PEx pins */ 
@@ -701,11 +706,11 @@ void SystemInit_ExtMemCtl(void)
 
   /* Connect PGx pins to FMC Alternate function */
   GPIOG->AFR[0]  = 0x00CCCCCC;
-  GPIOG->AFR[1]  = 0x000000C0;
+  GPIOG->AFR[1]  = 0x00000C00;
   /* Configure PGx pins in Alternate function mode */ 
-  GPIOG->MODER   = 0x00085AAA;
+  GPIOG->MODER   = 0x00200AAA;
   /* Configure PGx pins speed to 100 MHz */ 
-  GPIOG->OSPEEDR = 0x000CAFFF;
+  GPIOG->OSPEEDR = 0x00300FFF;
   /* Configure PGx pins Output type to push-pull */  
   GPIOG->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PGx pins */ 
@@ -735,10 +740,10 @@ void SystemInit_ExtMemCtl(void)
    || defined(STM32F412Zx) || defined(STM32F412Vx)
   /* Delay after an RCC peripheral clock enabling */
   tmp = READ_BIT(RCC->AHB3ENR, RCC_AHB3ENR_FSMCEN);
-  /* Configure and enable Bank1_SRAM2 */
-  FSMC_Bank1->BTCR[2]  = 0x00001011;
-  FSMC_Bank1->BTCR[3]  = 0x00000201;
-  FSMC_Bank1E->BWTR[2] = 0x0FFFFFFF;
+  /* Configure and enable Bank1_SRAM3 */
+  FSMC_Bank1->BTCR[4]  = 0x00001011;
+  FSMC_Bank1->BTCR[5]  = 0x00100911;
+  FSMC_Bank1E->BWTR[4] = 0x0FFFFFFF;
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F412Zx || STM32F412Vx */
 
 #endif /* DATA_IN_ExtSRAM */
