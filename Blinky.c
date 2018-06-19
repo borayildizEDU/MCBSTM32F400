@@ -20,32 +20,11 @@
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
 
 
-
-#define MEM_ADDRESS		(*((volatile unsigned long *) 0x20000000))
-
 /*----------------------------------------------------------------------------
  * Main
  *---------------------------------------------------------------------------*/ 
-int i __attribute__((at(0x20000004)));
-volatile int m = 0;
-
-
-int foo(int i){
-	int a;
- 
-	//a = m;
-	i = a;
-
-	return i;
-}
- 
- 
 int main (void) {
-	MEM_ADDRESS = 5;
-	
-	MEM_ADDRESS++;
-                         				   
-	foo(i);
+
 
   for(;;);
 }
