@@ -1,1 +1,8 @@
 1.) Pure RTX5 code size = 27620
+2.) Up to 1 Mbyte of Flash memory
+
+3.) UART1 in use;
+For V1.1 boards only, the RX3/4-RX1 label printed at J13, and the TX3/4-TX1 label printed at J14 are incorrect. For this version of the board, they should be labeled:
+J13 TX1-TX3/4
+J14 RX1-RX3/4
+as shown in the above picture. 
