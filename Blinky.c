@@ -16,7 +16,7 @@
 #include "Config.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
 #include "led.h"
-
+#include "EventRecorder.h"
 
 
 
@@ -63,6 +63,7 @@ osThreadDef(task3, osPriorityNormal, 1, 0);
  * MainApplication Thread
  *---------------------------------------------------------------------------*/ 
 void app_main(void const *argument){
+	int i = 0;
 	
 	tid_task1 = osThreadCreate(osThread(task1), NULL);   
 	tid_task2 = osThreadCreate(osThread(task2), NULL);  
@@ -71,6 +72,7 @@ void app_main(void const *argument){
 	while(1){
 		osDelay(1000);
 		ToggleLed(0);
+		EventRecord2(0x0001, i++, i++); 
 	}
 }
 
@@ -86,6 +88,7 @@ int main (void) {
   HAL_Init();                               				   
   SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);     
 	LED_Initialize();
+	EventRecorderInitialize (EventRecordAll, 1); 
 	
 	
 	osKernelInitialize();                     				

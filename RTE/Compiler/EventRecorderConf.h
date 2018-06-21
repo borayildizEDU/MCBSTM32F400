@@ -18,7 +18,7 @@
 //     <1048576=>1048576
 //   <i>Configure size of Event Record Buffer (each record is 16 bytes)
 //   <i>Must be 2^n (min=8, max=1048576)
-#define EVENT_RECORD_COUNT      64U
+#define EVENT_RECORD_COUNT      8U
 
 //   <o>Time Stamp Source
 //      <0=> DWT Cycle Counter  <1=> SysTick
