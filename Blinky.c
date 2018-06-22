@@ -25,9 +25,10 @@ osThreadId_t tid_app, tid_task1, tid_task2, tid_task3;
 
 /* USART Driver */
 extern ARM_DRIVER_USART Driver_USART1;
+ARM_DRIVER_USART *pUART = &Driver_USART1;
 
 /*----------------------------------------------------------------------------
- * Task1: USART THREAD
+ * UART INIT
  *---------------------------------------------------------------------------*/ 
 void myUSART_callback(uint32_t event){
   uint32_t mask;
@@ -46,14 +47,12 @@ void myUSART_callback(uint32_t event){
     __breakpoint(0);  /* Error: Call debugger or replace with custom error handling */
   }
 }
-
-
-
-void task1(void const *argument){
-	static ARM_DRIVER_USART * pUART = &Driver_USART1;
+ 
+ 
+ 
+void UartInitialize(){
 	ARM_DRIVER_VERSION     version;
 	ARM_USART_CAPABILITIES drv_capabilities;
-	char                   cmd;
  
 #ifdef DEBUG
 	version = USARTdrv->GetVersion();
@@ -81,32 +80,35 @@ void task1(void const *argument){
 	 
 	/* Enable Receiver and Transmitter lines */
 	pUART->Control (ARM_USART_CONTROL_TX, 1);
-	pUART->Control (ARM_USART_CONTROL_RX, 1);
+	pUART->Control (ARM_USART_CONTROL_RX, 1);	
+}
 
-	pUART->Send("\nPress Enter to receive a message", 34);
-	osSignalWait(0x01, osWaitForever);
+
+/*----------------------------------------------------------------------------
+ * Task1: USART RX THREAD
+ *---------------------------------------------------------------------------*/ 
+void task1(void const *argument){
+	char cmd;
      
 	while (1)
 	{
-		pUART->Receive(&cmd, 1);          /* Get byte from UART */
-		osSignalWait(0x01, osWaitForever);
-		if (cmd == 13)                       /* CR, send greeting  */
-		{
-			pUART->Send("\nHello World!", 12);
-			osSignalWait(0x01, osWaitForever);
-		}
-		
+		osSignalWait(0x01, osWaitForever);		
+		pUART->Receive(&cmd, 1);          	 /* Get byte from UART */		
 		ToggleLed(1);
 	}
 }
 
 /*----------------------------------------------------------------------------
- * Task2
+* Task2: USART TX THREAD
  *---------------------------------------------------------------------------*/ 
 void task2(void const *argument){
+	int i = 0;
+	
 	while(1){
 		osDelay(1000);
+		pUART->Send("1", 1);
 		ToggleLed(2);
+		i++;
 	}
 }
 
@@ -156,9 +158,10 @@ osThreadDef(app_main, osPriorityNormal, 1, 0);
 int main (void) {
 
   HAL_Init();                               				   
-  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);     
+  SystemClock_Config(RCC_SYSCLKSOURCE_PLLCLK);
+	EventRecorderInitialize (EventRecordAll, 1); 	
 	LED_Initialize();
-	EventRecorderInitialize (EventRecordAll, 1); 
+	UartInitialize();
 	
 	
 	osKernelInitialize();                     				
